@@ -1,4 +1,4 @@
-name: Backend CD
+name: Frontend CD
 on:
   push:
     branches: [ main ]
@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Trigger Render Deploy
+      - name: Trigger Vercel Deploy
         env:
-          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: curl -X POST "$HOOK"

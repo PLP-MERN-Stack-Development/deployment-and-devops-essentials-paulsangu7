@@ -1,17 +1,13 @@
-import React from 'react';
-import BugForm from './components/BugForm';
-import BugList from './components/BugList';
-import ErrorBoundary from './components/ErrorBoundary';
+import React from "react";
+import UserList from "./components/UserList";
 
-export default function App() {
+function App() {
   return (
-    <ErrorBoundary>
-      <div style={{ padding: 20 }}>
-        <h1>Bug Tracker</h1>
-        <BugForm />
-        <hr />
-        <BugList />
-      </div>
-    </ErrorBoundary>
+    <div style={{ padding: "20px" }}>
+      <h1>WorkDesk Users</h1>
+      <UserList />
+    </div>
   );
 }
+
+export default App;
